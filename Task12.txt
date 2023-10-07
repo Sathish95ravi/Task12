@@ -1,0 +1,157 @@
+
+
+1.Employee Program:-
+
+package firstprog;
+
+class EmployeeDetails {  
+ 
+int emp_id, salary,String name;  
+  
+public int getEmp_id() {  
+    return emp_id;  
+}  
+public void setEmp_id(int emp_id) {  
+    this.emp_id = emp_id;  
+}  
+public int getSalary() {  
+    return salary;  
+}  
+public void setSalary(int salary) {  
+    this.salary = salary;  
+}  firstprog
+public String getName() {  
+    return name;  
+}  
+public void setName(String name) {  
+    this.name = name;  
+}  
+
+public String toString() {  
+    return "Employee [emp_id = " + emp_id + ", salary = " + salary + ", name = " + name + "]";  
+    }  
+      
+}  
+package secondprog;
+
+import firstprog.EmployeeDetails;
+
+public class Employee{  
+     
+    public static void main(String args[]) {  
+          
+          
+        EmployeeDetails emp = new EmployeeDetails();  
+         
+        emp.setEmp_id(101);  
+        
+        emp.setName("Emma ");  
+         
+        emp.setSalary(15000);  
+          
+          
+        
+        System.out.println(emp);  
+          
+         
+        int sal = emp.getSalary();  
+        int increment = 0;  
+         
+        if ((sal >=1000) && (sal <=1500))  
+        {  
+            
+            increment += (sal * 2)/100;  
+            sal = sal+increment;  
+              
+            emp.setSalary(sal);  
+            System.out.println("\n Salary is incremented \n");  
+            System.out.println(emp);  
+              
+        }else if ((sal >=1500) && (sal <=20000)){  
+             
+            increment += (sal * 5)/100;  
+            sal = sal+increment;  
+              
+            emp.setSalary(sal);  
+            System.out.println("\n Salary is incremented \n");  
+            System.out.println(emp);  
+        }else {  
+            System.out.println("\n Salary is not incremented \n");  
+            System.out.println(emp);  
+        }         
+    }  
+}  
+2.Array List:-
+import java.util.ArrayList; 
+  
+public class ArrayList{ 
+  
+    
+    public static void main(String[] args) 
+    { 
+        
+        ArrayList<String> list = new ArrayList<>(); 
+  
+       
+        list.add("Java"); 
+        list.add("help"); 
+        list.add("program"); 
+        list.add("eclipse"); 
+  
+       
+        System.out.println("ArrayList: " + list); 
+  
+        
+        System.out.println("Size of ArrayList = "
+                           + list.size()); 
+  
+         
+        list.clear(); 
+  
+        
+        System.out.println("\nAfter clear\n\n"
+                         + "ArrayList: " + list); 
+  
+       
+        System.out.println("Size of ArrayList = "
+                           + list.size()); 
+    } 
+} 
+
+3.TreeMap program:-
+
+import java.util.TreeMap;
+
+class EmpDetails{
+    public static void main(String[] args) {
+      
+      TreeMap<String, Integer> empID = new TreeMap<>();
+
+     
+      empID.put("John", 3);
+      empID.put("Charlie",4);
+      empID.put("Jack",5);
+  
+      System.out.println("TreeMap of empID:"+empID);
+
+    }
+}
+4.List to Array:-
+
+import java.util.ArrayList;
+public class ListToArray {
+   public static void main(String args[]){
+      ArrayList<String> list = new ArrayList<String>();
+      list.add("Apple");
+      list.add("Orange");
+      list.add("Banana");
+
+      System.out.println("Contents of list ::"+list);
+      String[] myArray = new String[list.size()];
+      list.toArray(myArray);
+
+      for(int i=0; i<myArray.length; i++){
+         System.out.println("Element at the index "+i+" is ::"+myArray[i]);
+      }
+   }
+}
